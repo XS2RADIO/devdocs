@@ -97,6 +97,15 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
 }
 ```
 
+### Read entry
+
+#### Required fields
+
+Name                | Type      | Description
+--------------------|-----------|------------
+feed_id             | String    |
+url                 | String    |
+
 ## Contact
 
 Questions? Reach out to us via `<info@xs2radio.com>`.
