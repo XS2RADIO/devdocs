@@ -93,7 +93,7 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
     "text_editor": "text",
     "feed_id": "dagelijks-nieuws",
     "position": "1",
-    "image_url": ""
+    "image_url": "",
     "audio_url": "https://www..."
 }
 ```
@@ -154,7 +154,7 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
     "text_editor": "text",
     "feed_id": "dagelijks-nieuws",
     "position": "1",
-    "image_url": ""
+    "image_url": "",
     "audio_url": "https://www..."
 }
 ```
@@ -276,7 +276,7 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
     "text_editor": "text",
     "feed_id": "dagelijks-nieuws",
     "position": "1",
-    "image_url": ""
+    "image_url": "",
     "audio_url": "https://www..."
 }
 ```
