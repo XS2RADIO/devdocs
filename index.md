@@ -67,7 +67,7 @@ image_url           | String    |
 ```shell
 curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
   -XPOST \
-  -d '{"entry":{"feed_id":"dagelijks-nieuws"}}' \
+  -d '{"entry":{"feed_id":"dagelijks-nieuws","url":"https://wordpresssite.com/posts/the-last-article"}}' \
   https://api.xs2radio.com/api/v1/entries.json
 ```
 
@@ -94,6 +94,7 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
     "feed_id": "dagelijks-nieuws",
     "position": "1",
     "image_url": ""
+    "audio_url": "https://www..."
 }
 ```
 
@@ -134,7 +135,7 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
 ##### RESPONSE
 
 ```
-201 Created
+200 OK
 ```
 
 ```json
@@ -154,6 +155,7 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
     "feed_id": "dagelijks-nieuws",
     "position": "1",
     "image_url": ""
+    "audio_url": "https://www..."
 }
 ```
 
@@ -194,7 +196,7 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
 ##### RESPONSE
 
 ```
-201 Created
+200 OK
 ```
 
 ```json
@@ -213,7 +215,8 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
     "text_editor": "text",
     "feed_id": "dagelijks-nieuws",
     "position": "1",
-    "image_url": ""
+    "image_url": "",
+    "audio_url": "https://www..."
 }
 ```
 
@@ -254,7 +257,7 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
 ##### RESPONSE
 
 ```
-201 Created
+200 OK
 ```
 
 ```json
@@ -274,6 +277,7 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
     "feed_id": "dagelijks-nieuws",
     "position": "1",
     "image_url": ""
+    "audio_url": "https://www..."
 }
 ```
 
