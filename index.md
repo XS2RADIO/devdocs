@@ -61,7 +61,6 @@ Useful to enumerate the available URL slugs when working with entries.
 curl -s \
   -H "Content-Type: application/json" \
   -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
-  -X POST \
   https://api.xs2radio.com/api/v1/feeds.json
 ```
 
@@ -78,8 +77,8 @@ curl -s \
   "url":"https://joop.bnnvara.nl/feed", 
   "slug":"joop", 
   "visible":false, 
-  "created_at":Wed, 13 Jan 2021 15:19:53 UTC +00:00, 
-  "updated_at":Sat, 06 Feb 2021 07:00:16 UTC +00:00, 
+  "created_at":"2021-02-17 13:43:20", 
+  "updated_at":"2021-02-17 13:43:20", 
   "language":"nl_NL"
   }
 ]
