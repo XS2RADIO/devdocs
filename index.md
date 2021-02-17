@@ -91,15 +91,15 @@ curl -s \
 
 Name                | Type      | Description
 --------------------|-----------|------------
-entry[title]        | String    |
-entry[published]    | Datetime  | Publication date, e.g. `2020-02-23 14:17:12`
-entry[content]      | String    | Can contain HTML
-entry[url]          | String    |
-entry[author]       | String    |
-entry[visible]      | Boolean   |
-entry[text_editor]  | String    | Can be `ssml` or `text`
-entry[position]     | Integer   | The lower the value, the earlier this Entry appears in the Feed
-entry[image_url]    | String    |
+`entry[title]`        | String    |
+`entry[published]`    | Datetime  | Publication date, e.g. `2020-02-23 14:17:12`
+`entry[content]`      | String    | Can contain HTML
+`entry[url]`          | String    |
+`entry[author]`       | String    |
+`entry[visible]`      | Boolean   |
+`entry[text_editor]`  | String    | Can be `ssml` or `text`
+`entry[position]`     | Integer   | The lower the value, the earlier this Entry appears in the Feed
+`entry[image_url]`    | String    |
 
 #### `</>` Example
 
@@ -143,36 +143,17 @@ curl -s \
 
 ### Read entry
 
-#### Required fields
-
-Name                | Type      | Description
---------------------|-----------|------------
-feed_id             | String    |
-url                 | String    |
-
-#### Optional fields
-
-Name                | Type      | Description
---------------------|-----------|------------
-title               | String    |
-published           | Datetime  | Publication date, e.g. `2020-02-23 14:17:12`
-content             | String    | Can contain HTML
-url                 | String    |
-author              | String    |
-visible             | Boolean   |
-text_editor         | String    | Can be `ssml` or `text`
-position            | Integer   | The lower the value, the earlier this Entry appears in the Feed
-image_url           | String    |
+Get the entry's attribute values.
 
 #### `</>` Example
 
 ##### REQUEST
 
 ```shell
-curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
-  -XGET \
-  -d '{"entry":{"url":"https://wordpresssite.com/posts/the-last-article"}}' \
-  https://api.xs2radio.com/api/v1/entries.json
+curl -s \
+  -H "Content-Type: application/json" 
+  -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
+  https://api.xs2radio.com/api/v1/feeds/asia/entries/123.json
 ```
 
 ##### RESPONSE
@@ -208,32 +189,33 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
 
 Name                | Type      | Description
 --------------------|-----------|------------
-feed_id             | String    |
-url                 | String    |
+entry[url]          | String    |
 
 #### Optional fields
 
 Name                | Type      | Description
 --------------------|-----------|------------
-title               | String    |
-published           | Datetime  | Publication date, e.g. `2020-02-23 14:17:12`
-content             | String    | Can contain HTML
-url                 | String    |
-author              | String    |
-visible             | Boolean   |
-text_editor         | String    | Can be `ssml` or `text`
-position            | Integer   | The lower the value, the earlier this Entry appears in the Feed
-image_url           | String    |
+entry[title]        | String    |
+entry[published]    | Datetime  | Publication date, e.g. `2020-02-23 14:17:12`
+entry[content]      | String    | Can contain HTML
+entry[url]          | String    |
+entry[author]       | String    |
+entry[visible]      | Boolean   |
+entry[text_editor]  | String    | Can be `ssml` or `text`
+entry[position]     | Integer   | The lower the value, the earlier this Entry appears in the Feed
+entry[image_url]    | String    |
 
 #### `</>` Example
 
 ##### REQUEST
 
 ```shell
-curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
-  -XPATCH \
-  -d '{"entry":{"url":"https://wordpresssite.com/posts/the-last-article"}}' \
-  https://api.xs2radio.com/api/v1/entries.json
+curl -s \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
+  -X PATCH \
+  -d '{"entry":{"title":"<s>Tentoonstelling World Press</s>"}}' \
+  https://api.xs2radio.com/api/v1/feeds/asia/entries/123.json
 ```
 
 ##### RESPONSE
@@ -291,10 +273,11 @@ image_url           | String    |
 ##### REQUEST
 
 ```shell
-curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
-  -XDELETE \
-  -d '{"entry":{"url":"https://wordpresssite.com/posts/the-last-article"}}' \
-  https://api.xs2radio.com/api/v1/entries.json
+curl -s \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
+  -X DELETE \
+  https://api.xs2radio.com/api/v1/feeds/asia/entries/123.json
 ```
 
 ##### RESPONSE
@@ -305,22 +288,6 @@ curl -s -H "Content-Type: application/json" -H "Authorization: Token pX27zsMN2Vi
 
 ```json
 {
-    "id": "123",
-    "title": "",
-    "published": "",
-    "content": "",
-    "url": "",
-    "author": "",
-    "character_count": "",
-    "created_at": "",
-    "updated_at": "",
-    "seconds": "0",
-    "visible": true,
-    "text_editor": "text",
-    "feed_id": "dagelijks-nieuws",
-    "position": "1",
-    "image_url": "",
-    "audio_url": "https://www..."
   "id":22949, 
   "title":"<s>Tentoonstelling World Press</s>", 
   "published":"2021-02-17T11:44:45.000Z", 
