@@ -9,6 +9,7 @@ All endpoints use `https://api.xs2radio.com` as the base URL.
 Feeds||Description
 |-|-|-|
 `/v1/feeds.json`  | GET  | [List all feeds](#list-feeds)
+
 Entries||Description
 |-|-|-|
 `/v1/feeds/asia/entries.json`  | POST  | [Create an entry](#create-entry)
