@@ -9,12 +9,11 @@ All endpoints use `https://api.xs2radio.com` as the base URL.
 Feeds||Description
 |-|-|-|
 `/v1/feeds.json`  | GET  | [List all feeds](#list-feeds)
-
 Entries||Description
 |-|-|-|
 `/v1/feeds/asia/entries.json`  | POST  | [Create an entry](#create-entry)
-`/v1/feeds/asia/entries/123.json`  | GET  | [Read an entry](#read-entry)
 `/v1/feeds/asia/entries.json`  | GET  | [List all entries](#list-entries)
+`/v1/feeds/asia/entries/123.json`  | GET  | [Read an entry](#read-entry)
 `/v1/feeds/asia/entries/123.json`  | PATCH  | [Update an entry](#update-entry)
 `/v1/feeds/asia/entries/123.json`  | DELETE  | [Delete an entry](#delete-entry)
 
@@ -186,7 +185,7 @@ curl -s \
 ```
 ### List Entries
 
-Useful to enumerate the available URL slugs when working with entries.
+Useful to enumerate the available Entry Id's when working with entries.
 
 #### `</>` Example
 
@@ -218,129 +217,6 @@ curl -s \
   "language":"nl_NL"
   }
 ]
-```
-
-### Update entry
-
-#### Required fields
-
-Name                | Type      | Description
---------------------|-----------|------------
-entry[url]          | String    |
-
-#### Optional fields
-
-Name                | Type      | Description
---------------------|-----------|------------
-entry[title]        | String    |
-entry[published]    | Datetime  | Publication date, e.g. `2020-02-23 14:17:12`
-entry[content]      | String    | Can contain HTML
-entry[url]          | String    |
-entry[author]       | String    |
-entry[visible]      | Boolean   |
-entry[text_editor]  | String    | Can be `ssml` or `text`
-entry[position]     | Integer   | The lower the value, the earlier this Entry appears in the Feed
-entry[image_url]    | String    |
-
-#### `</>` Example
-
-##### REQUEST
-
-```shell
-curl -s \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
-  -X PATCH \
-  -d '{"entry":{"title":"<s>Tentoonstelling World Press</s>"}}' \
-  https://api.xs2radio.com/api/v1/feeds/asia/entries/123.json
-```
-
-##### RESPONSE
-
-```
-200 OK
-```
-
-```json
-{
-    "id": "123",
-    "title": "",
-    "published": "",
-    "content": "",
-    "url": "",
-    "author": "",
-    "character_count": "",
-    "created_at": "",
-    "updated_at": "",
-    "seconds": "0",
-    "visible": true,
-    "text_editor": "text",
-    "feed_id": "dagelijks-nieuws",
-    "position": "1",
-    "image_url": "",
-    "audio_url": "https://www..."
-}
-```
-
-### Delete entry
-
-#### Required fields
-
-Name                | Type      | Description
---------------------|-----------|------------
-feed_id             | String    |
-url                 | String    |
-
-#### Optional fields
-
-Name                | Type      | Description
---------------------|-----------|------------
-title               | String    |
-published           | Datetime  | Publication date, e.g. `2020-02-23 14:17:12`
-content             | String    | Can contain HTML
-url                 | String    |
-author              | String    |
-visible             | Boolean   |
-text_editor         | String    | Can be `ssml` or `text`
-position            | Integer   | The lower the value, the earlier this Entry appears in the Feed
-image_url           | String    |
-
-#### `</>` Example
-
-##### REQUEST
-
-```shell
-curl -s \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
-  -X DELETE \
-  https://api.xs2radio.com/api/v1/feeds/asia/entries/123.json
-```
-
-##### RESPONSE
-
-```
-200 OK
-```
-
-```json
-{
-  "id":22949, 
-  "title":"<s>Tentoonstelling World Press</s>", 
-  "published":"2021-02-17T11:44:45.000Z", 
-  "content":"<s>De tentoonstelling van World Press Photo in de Nieuwe Kerk in Amsterdam gaat open op zaterdag 17 april.</s><s>Dat is twee dagen na de bekendmaking van de winnaars van de jaarlijkse persfotowedstrijd.</s><s>Belangstellenden kunnen de foto's tot en met zondag 25 juli in de kerk bekijken, maar alleen met een gereserveerd ticket.</s>", 
-  "url":"d5f040ef3b625041b156331ba406c188", 
-  "author":"ANP Producties", 
-  "character_count":nil, 
-  "created_at":"2021-02-17T11:50:51.823Z", 
-  "updated_at":"2021-02-17T12:30:49.220Z", 
-  "feed_id":21, 
-  "seconds":33, 
-  "visible":true, 
-  "text_editor":"ssml", 
-  "position":21385, 
-  "image_url":"https://www.anpfoto.nl/search.pp?ShowPicture=411698522"
-}
 ```
 
 ### Update entry
