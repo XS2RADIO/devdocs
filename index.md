@@ -8,12 +8,13 @@ All endpoints use `https://api.xs2radio.com` as the base URL.
 
 Feeds||Description
 |-|-|-|
-`/v1/feeds.json`  | POST  | [List all feeds](#list-feeds)
+`/v1/feeds.json`  | GET  | [List all feeds](#list-feeds)
 
 Entries||Description
 |-|-|-|
 `/v1/feeds/asia/entries.json`  | POST  | [Create an entry](#create-entry)
 `/v1/feeds/asia/entries/123.json`  | GET  | [Read an entry](#read-entry)
+`/v1/feeds/asia/entries.json`  | GET  | [List all entries](#list-entries)
 `/v1/feeds/asia/entries/123.json`  | PATCH  | [Update an entry](#update-entry)
 `/v1/feeds/asia/entries/123.json`  | DELETE  | [Delete an entry](#delete-entry)
 
@@ -61,6 +62,7 @@ Useful to enumerate the available URL slugs when working with entries.
 curl -s \
   -H "Content-Type: application/json" \
   -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
+  -X GET \
   https://api.xs2radio.com/api/v1/feeds.json
 ```
 
@@ -108,7 +110,7 @@ Name                | Type      | Description
 curl -s \
   -H "Content-Type: application/json" \
   -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
-  -X P OST \
+  -X POST \
   -d '{"entry":{"title":"<s>Tentoonstelling World Press</s>"}}' \
   https://api.xs2radio.com/api/v1/feeds/asia/entries.json
 ```
@@ -152,6 +154,7 @@ Get the entry's attribute values.
 curl -s \
   -H "Content-Type: application/json" 
   -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
+  -X GET \
   https://api.xs2radio.com/api/v1/feeds/asia/entries/123.json
 ```
 
@@ -180,6 +183,41 @@ curl -s \
     "image_url": "",
     "audio_url": "https://www..."
 }
+```
+### List Entries
+
+Useful to enumerate the available URL slugs when working with entries.
+
+#### `</>` Example
+
+##### REQUEST
+
+```shell
+curl -s \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
+  -X GET \
+  https://api.xs2radio.com/api/v1/feeds/asia/entries.json
+```
+
+##### RESPONSE
+
+```
+200 OK
+```
+
+```json
+[
+  {"id":27, 
+  "name":"Joop", 
+  "url":"https://joop.bnnvara.nl/feed", 
+  "slug":"joop", 
+  "visible":false, 
+  "created_at":"2021-02-17 13:43:20", 
+  "updated_at":"2021-02-17 13:43:20", 
+  "language":"nl_NL"
+  }
+]
 ```
 
 ### Update entry
