@@ -74,13 +74,13 @@ curl -s \
 
 ```json
 [
-  {"id":27, 
-  "name":"Joop", 
-  "url":"https://joop.bnnvara.nl/feed", 
-  "slug":"joop", 
-  "visible":false, 
-  "created_at":"2021-02-17 13:43:20", 
-  "updated_at":"2021-02-17 13:43:20", 
+  {"id":27,
+  "name":"Joop",
+  "url":"https://joop.bnnvara.nl/feed",
+  "slug":"joop",
+  "visible":false,
+  "created_at":"2021-02-17 13:43:20",
+  "updated_at":"2021-02-17 13:43:20",
   "language":"nl_NL"
   }
 ]
@@ -152,7 +152,7 @@ Get the entry's attribute values.
 
 ```shell
 curl -s \
-  -H "Content-Type: application/json" 
+  -H "Content-Type: application/json"
   -H "Authorization: Token pX27zsMN2ViQKta1bGfLmVJE" \
   -X GET \
   https://api.xs2radio.com/api/v1/feeds/asia/entries/123.json
@@ -208,13 +208,13 @@ curl -s \
 
 ```json
 [
-  {"id":27, 
-  "name":"Joop", 
-  "url":"https://joop.bnnvara.nl/feed", 
-  "slug":"joop", 
-  "visible":false, 
-  "created_at":"2021-02-17 13:43:20", 
-  "updated_at":"2021-02-17 13:43:20", 
+  {"id":27,
+  "name":"Joop",
+  "url":"https://joop.bnnvara.nl/feed",
+  "slug":"joop",
+  "visible":false,
+  "created_at":"2021-02-17 13:43:20",
+  "updated_at":"2021-02-17 13:43:20",
   "language":"nl_NL"
   }
 ]
@@ -245,20 +245,20 @@ curl -s \
 
 ```json
 {
-  "id":22949, 
-  "title":"<s>Tentoonstelling World Press</s>", 
-  "published":"2021-02-17T11:44:45.000Z", 
-  "content":"<s>De tentoonstelling van World Press Photo in de Nieuwe Kerk in Amsterdam gaat open op zaterdag 17 april.</s><s>Dat is twee dagen na de bekendmaking van de winnaars van de jaarlijkse persfotowedstrijd.</s><s>Belangstellenden kunnen de foto's tot en met zondag 25 juli in de kerk bekijken, maar alleen met een gereserveerd ticket.</s>", 
-  "url":"d5f040ef3b625041b156331ba406c188", 
-  "author":"ANP Producties", 
-  "character_count":nil, 
-  "created_at":"2021-02-17T11:50:51.823Z", 
-  "updated_at":"2021-02-17T12:30:49.220Z", 
-  "feed_id":21, 
-  "seconds":33, 
-  "visible":true, 
-  "text_editor":"ssml", 
-  "position":21385, 
+  "id":22949,
+  "title":"<s>Tentoonstelling World Press</s>",
+  "published":"2021-02-17T11:44:45.000Z",
+  "content":"<s>De tentoonstelling van World Press Photo in de Nieuwe Kerk in Amsterdam gaat open op zaterdag 17 april.</s><s>Dat is twee dagen na de bekendmaking van de winnaars van de jaarlijkse persfotowedstrijd.</s><s>Belangstellenden kunnen de foto's tot en met zondag 25 juli in de kerk bekijken, maar alleen met een gereserveerd ticket.</s>",
+  "url":"d5f040ef3b625041b156331ba406c188",
+  "author":"ANP Producties",
+  "character_count":nil,
+  "created_at":"2021-02-17T11:50:51.823Z",
+  "updated_at":"2021-02-17T12:30:49.220Z",
+  "feed_id":21,
+  "seconds":33,
+  "visible":true,
+  "text_editor":"ssml",
+  "position":21385,
   "image_url":"https://www.anpfoto.nl/search.pp?ShowPicture=411698522"
 }
 ```
@@ -285,24 +285,24 @@ curl -s \
 
 ```json
 {
-  "id":22949, 
-  "title":"<s>Tentoonstelling World Press</s>", 
-  "published":"2021-02-17T11:44:45.000Z", 
-  "content":"<s>De tentoonstelling van World Press Photo in de Nieuwe Kerk in Amsterdam gaat open op zaterdag 17 april.</s><s>Dat is twee dagen na de bekendmaking van de winnaars van de jaarlijkse persfotowedstrijd.</s><s>Belangstellenden kunnen de foto's tot en met zondag 25 juli in de kerk bekijken, maar alleen met een gereserveerd ticket.</s>", 
-  "url":"d5f040ef3b625041b156331ba406c188", 
-  "author":"ANP Producties", 
-  "character_count":nil, 
-  "created_at":"2021-02-17T11:50:51.823Z", 
-  "updated_at":"2021-02-17T12:30:49.220Z", 
-  "feed_id":21, 
-  "seconds":33, 
-  "visible":true, 
-  "text_editor":"ssml", 
-  "position":21385, 
+  "id":22949,
+  "title":"<s>Tentoonstelling World Press</s>",
+  "published":"2021-02-17T11:44:45.000Z",
+  "content":"<s>De tentoonstelling van World Press Photo in de Nieuwe Kerk in Amsterdam gaat open op zaterdag 17 april.</s><s>Dat is twee dagen na de bekendmaking van de winnaars van de jaarlijkse persfotowedstrijd.</s><s>Belangstellenden kunnen de foto's tot en met zondag 25 juli in de kerk bekijken, maar alleen met een gereserveerd ticket.</s>",
+  "url":"d5f040ef3b625041b156331ba406c188",
+  "author":"ANP Producties",
+  "character_count":nil,
+  "created_at":"2021-02-17T11:50:51.823Z",
+  "updated_at":"2021-02-17T12:30:49.220Z",
+  "feed_id":21,
+  "seconds":33,
+  "visible":true,
+  "text_editor":"ssml",
+  "position":21385,
   "image_url":"https://www.anpfoto.nl/search.pp?ShowPicture=411698522"
 }
 ```
 
 ## Contact
 
-Questions? Reach out to us via `<info@xs2radio.com>`.
+Questions? Reach out to us via `<info@xs2content.com>`.
