@@ -1,2 +1,2 @@
 # devdocs
-XS2RADIO API documentation for developers.
+XS2Content API documentation for developers.
